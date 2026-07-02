@@ -1,0 +1,14 @@
+# Python / uv local dev artifacts — never publish these; the plugin is
+# built from source (pyproject.toml + uv.lock) via `uvx --from git+...`.
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+*.swp

@@ -1,0 +1,27 @@
+{
+  "name": "infosec",
+  "interface": {
+    "displayName": "InfoSec Toolkit",
+    "shortDescription": "Curated security skills, tool wrappers and MCP servers for infosec-cli."
+  },
+  "plugins": [
+    {
+      "name": "pentest-recon",
+      "source": { "source": "local", "path": "./plugins/pentest-recon" },
+      "policy": { "installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE" },
+      "category": "reconnaissance"
+    },
+    {
+      "name": "web-nuclei",
+      "source": { "source": "local", "path": "./plugins/web-nuclei" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "web"
+    },
+    {
+      "name": "darkweb-osint",
+      "source": { "source": "local", "path": "./plugins/darkweb-osint" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "osint"
+    }
+  ]
+}

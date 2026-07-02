@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "robin-darkweb": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/ModelsLab/infosec-plugins.git#subdirectory=plugins/darkweb-osint",
+        "darkweb-mcp"
+      ]
+    }
+  }
+}

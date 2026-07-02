@@ -1,0 +1,13 @@
+{
+  "name": "darkweb-osint",
+  "version": "0.1.0",
+  "description": "Dark-web OSINT: fan-out onion search + Tor page scraping exposed over stdio MCP. Engine lifted from robin (MIT). Authorized threat-intel use only. Requires a local Tor daemon on 127.0.0.1:9050.",
+  "keywords": ["osint", "darkweb", "tor", "threat-intel"],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Dark-web OSINT (Tor)",
+    "shortDescription": "Onion search + Tor scraping for authorized threat-intel.",
+    "category": "osint",
+    "capabilities": ["execute"]
+  }
+}

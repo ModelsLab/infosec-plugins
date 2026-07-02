@@ -1,0 +1,13 @@
+{
+  "name": "web-nuclei",
+  "version": "0.1.0",
+  "description": "MCP wrapper around the `nuclei` scanner (shells out to a locally-installed binary via Docker; nothing weaponized is redistributed).",
+  "keywords": ["web", "nuclei", "vuln-scan", "dast"],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Nuclei (web)",
+    "shortDescription": "Template-based web vulnerability scanning via nuclei.",
+    "category": "web",
+    "capabilities": ["execute"]
+  }
+}
