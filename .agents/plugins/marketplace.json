@@ -12,16 +12,52 @@
       "category": "reconnaissance"
     },
     {
+      "name": "pentest-report",
+      "source": { "source": "local", "path": "./plugins/pentest-report" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "reporting"
+    },
+    {
       "name": "web-nuclei",
       "source": { "source": "local", "path": "./plugins/web-nuclei" },
       "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
-      "category": "web"
+      "category": "web",
+      "requirements": {
+        "tools": [
+          {
+            "command": "docker",
+            "hint": "web-nuclei runs the nuclei scanner in a container. Install Docker Desktop (https://docs.docker.com/get-docker/) and make sure `docker` is on PATH, then retry."
+          }
+        ]
+      }
     },
     {
       "name": "darkweb-osint",
       "source": { "source": "local", "path": "./plugins/darkweb-osint" },
       "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
-      "category": "osint"
+      "category": "osint",
+      "requirements": {
+        "tools": [
+          {
+            "command": "uv",
+            "install": {
+              "macos": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+              "linux": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+              "windows": "powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\""
+            },
+            "hint": "uv provides the `uvx` launcher this plugin's MCP server runs under."
+          },
+          {
+            "command": "tor",
+            "install": {
+              "macos": "brew install tor && brew services start tor",
+              "linux": "sudo apt-get update && sudo apt-get install -y tor && sudo service tor start",
+              "windows": "choco install -y tor"
+            },
+            "hint": "Needs a local Tor SOCKS proxy on 127.0.0.1:9050. If auto-install fails, install Tor manually and start it (`brew services start tor` / `sudo service tor start`)."
+          }
+        ]
+      }
     }
   ]
 }
