@@ -1,0 +1,14 @@
+The vulnerability-class taxonomy in the `web-app-testing` methodology skill is informed by the
+`skills/vulnerabilities/` library in Strix (https://github.com/usestrix/strix).
+
+This skill was authored clean-room: only the methodology structure (which vulnerability classes to
+test, WSTG alignment) was adapted; no source text or code was copied. Attribution is provided as a
+courtesy and to record provenance.
+
+Strix is licensed under the Apache License, Version 2.0.
+Copyright 2025 OmniSecure Inc.
+
+Full license text: https://www.apache.org/licenses/LICENSE-2.0
+
+If Strix source files are ever vendored into this repository, the full Apache-2.0 LICENSE and any
+upstream NOTICE file must be reproduced here at that time.

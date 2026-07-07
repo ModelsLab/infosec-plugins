@@ -1,0 +1,13 @@
+{
+  "name": "scope-guard",
+  "version": "0.1.0",
+  "description": "Authorized-use enforcement: scope confirmation, rules-of-engagement, and hard-refusal boundaries for security work (pure knowledge, no runtime deps).",
+  "keywords": ["safety", "scope", "authorization", "rules-of-engagement", "methodology"],
+  "skills": "./skills",
+  "interface": {
+    "displayName": "Scope Guard",
+    "shortDescription": "Authorized-use / scope enforcement for engagements.",
+    "category": "agent-framework",
+    "capabilities": ["read"]
+  }
+}

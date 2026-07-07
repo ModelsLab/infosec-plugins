@@ -58,6 +58,18 @@
           }
         ]
       }
+    },
+    {
+      "name": "scope-guard",
+      "source": { "source": "local", "path": "./plugins/scope-guard" },
+      "policy": { "installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE" },
+      "category": "agent-framework"
+    },
+    {
+      "name": "web-app-testing",
+      "source": { "source": "local", "path": "./plugins/web-app-testing" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "web"
     }
   ]
 }
