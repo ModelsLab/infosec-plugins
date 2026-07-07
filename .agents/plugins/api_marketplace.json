@@ -26,7 +26,8 @@
         "tools": [
           {
             "command": "docker",
-            "hint": "web-nuclei runs the nuclei scanner in a container. Install Docker Desktop (https://docs.docker.com/get-docker/) and make sure `docker` is on PATH, then retry."
+            "check": "docker info",
+            "hint": "web-nuclei runs the nuclei scanner in a container. Install Docker Desktop (https://docs.docker.com/get-docker/), make sure `docker` is on PATH and the daemon is running, then retry."
           }
         ]
       }
@@ -54,6 +55,7 @@
               "linux": "sudo apt-get update && sudo apt-get install -y tor && sudo service tor start",
               "windows": "choco install -y tor"
             },
+            "probe": "127.0.0.1:9050",
             "hint": "Needs a local Tor SOCKS proxy on 127.0.0.1:9050. If auto-install fails, install Tor manually and start it (`brew services start tor` / `sudo service tor start`)."
           }
         ]
